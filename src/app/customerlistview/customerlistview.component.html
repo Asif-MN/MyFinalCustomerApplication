@@ -1,0 +1,9 @@
+<div style="display:flex;flex-wrap:wrap;height:400px;display:block;" class="overflow-auto"> 
+    <ul class="list-group list-group-flush"  >
+        <li class="list-group-item" *ngFor="let customer of customers">
+            <img *ngIf="(customer.gender == 'Male')" src="https://randomuser.me/api/portraits/men/{{customer.id}}.jpg" alt="image" style="width:15%;height:15%;border-radius:55%;">
+            <img *ngIf="(customer.gender == 'Female')" src="https://randomuser.me/api/portraits/women/{{customer.id}}.jpg" alt="image" style="width:15%;height:15%;border-radius:55%;">
+            &nbsp;{{customer.firstname}} {{customer.lastname}}
+        </li>
+    </ul>
+</div>

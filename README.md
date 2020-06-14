@@ -1,2 +1,0 @@
-# MyFinalCustomerApplication
-Created with CodeSandbox

@@ -1,0 +1,156 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "userid": 2,
+      "firstname": "Michelle",
+      "lastname": "Avery",
+      "gender": "Female",
+      "email": "michelle.avery3@acmecorp.com",
+      "address": "123 abc blvd",
+      "city": "Dallas",
+      "state": "Texas"
+    },
+    {
+      "id": 2,
+      "userid": 2,
+      "firstname": "Ted",
+      "lastname": "James",
+      "gender": "Male",
+      "email": "ted.james@acmecorp.com",
+      "address": "45 new blvd",
+      "city": "Phoenix",
+      "state": "Arizonia"
+    },
+    {
+      "id": 3,
+      "userid": 2,
+      "firstname": "Brad",
+      "lastname": "Green",
+      "gender": "Male",
+      "email": "brad.green@acmecorp.com",
+      "address": "abcd st",
+      "city": "Orlando",
+      "state": "Florida"
+    },
+    {
+      "userid": 3,
+      "firstname": "first2",
+      "lastname": "last2",
+      "gender": "Female",
+      "email": "firstlast2@abc.com",
+      "address": "1234 st",
+      "city": "city2",
+      "state": "state2",
+      "id": 4
+    },
+    {
+      "userid": 2,
+      "firstname": "Tina",
+      "lastname": "Adams",
+      "gender": "Female",
+      "email": "tina.adams@acmecorp.com",
+      "address": "new blvd",
+      "city": "Chandler",
+      "state": "Arizonia",
+      "id": 5
+    },
+    {
+      "userid": 2,
+      "firstname": "Tonya",
+      "lastname": "Smith",
+      "gender": "Female",
+      "email": "tonya.smith@acmecorp.com",
+      "address": "2455",
+      "city": "Atlanta",
+      "state": "Georgia",
+      "id": 6
+    },
+    {
+      "userid": 2,
+      "firstname": "Misko",
+      "lastname": "Hevery",
+      "gender": "Male",
+      "email": "misko.hevery@acmecorp.com",
+      "address": "no address",
+      "city": "North Carey",
+      "state": "Carolina",
+      "id": 7
+    },
+    {
+      "userid": 2,
+      "firstname": "John",
+      "lastname": "Papa",
+      "gender": "Male",
+      "email": "john.papa@acmecorp.com",
+      "address": "32 st",
+      "city": "Orlando",
+      "state": "Florida",
+      "id": 8
+    },
+    {
+      "userid": 2,
+      "firstname": "Igor",
+      "lastname": "Minar",
+      "gender": "Male",
+      "email": "igor.minar@acmecorp.com",
+      "address": "33 ave",
+      "city": "Dallas",
+      "state": "Texas",
+      "id": 9
+    },
+    {
+      "userid": 2,
+      "firstname": "Heedy",
+      "lastname": "Wahlin",
+      "gender": "Female",
+      "email": "heedy.wahlin@acmecorp.com",
+      "address": "57  blvd",
+      "city": "Anaheim",
+      "state": "California",
+      "id": 10
+    },
+    {
+      "userid": 2,
+      "firstname": "Michelle",
+      "lastname": "Thompson",
+      "gender": "Female",
+      "email": "michelle.thompson@acmecorp.com",
+      "address": "8790 road",
+      "city": "Encinitas",
+      "state": "California",
+      "id": 11
+    },
+    {
+      "userid": 2,
+      "firstname": "Zed",
+      "lastname": "Bishop",
+      "gender": "Male",
+      "email": "zed.bishop@acmecorp.com",
+      "address": "889 ave",
+      "city": "Chandler",
+      "state": "Arizonia",
+      "id": 12
+    }
+  ],
+
+  "order": [
+    {
+      "id": 1,
+      "custid": 1,
+      "orderitem": "Basketball",
+      "orderdate": "12-11-2019",
+      "amount": "7.55",
+      "status": "Completed",
+      "deliverydate": ""
+    },
+    {
+      "id": 2,
+      "custid": 1,
+      "orderitem": "Shoes",
+      "orderdate": "24-09-2019",
+      "amount": "199.99",
+      "status": "Pending",
+      "deliverydate": "03-10-2019"
+    }]
+}

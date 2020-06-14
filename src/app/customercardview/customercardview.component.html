@@ -1,0 +1,27 @@
+<div class="form-group">
+    <input style="width:500px" type="text" class="form-control" placeholder="Search Here" [(ngModel)]="term" (keydown)="searchChange();" >
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 py-2" *ngFor="let customer of customers | filter:term | paginate: { itemsPerPage: 5, currentPage: cpage }" >
+            <div class="card h-100" style="min-width:350px;">
+                <div class="card-body">
+                    <h3 class="header" style="margin-top: 0px;"><a class="header-name" (click)="viewCustomerInfo(customer.id, 1);">{{customer.firstname}} {{customer.lastname}}</a>&nbsp;<a *ngIf="(urole | iseditable)"  class="fa fa-edit fa-1x" [routerLink]="['/customerregister', customer.id]"></a></h3>
+                    <p class="card-text">
+                        <img class="left floated image" *ngIf="(customer.gender == 'Male')" src="https://randomuser.me/api/portraits/men/{{customer.id}}.jpg" alt="image" style="width:35%;height:35%;border-radius:3%;">
+                        <img class="left floated image" *ngIf="(customer.gender == 'Female')" src="https://randomuser.me/api/portraits/women/{{customer.id}}.jpg" alt="image" style="width:35%;height:35%;border-radius:3%;">
+                        <span class="float-right" style="padding-right:35%">
+                        {{customer.city}},<br>{{customer.state}}
+                        </span>
+                    </p>
+                    <button  style="margin-bottom:10px;width: 100%;" class="btn btn-primary btn-sm" (click)="viewCustomerInfo(customer.id, 2);">View Orders</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card">
+    <pagination-controls (pageChange)="cpage = $event"></pagination-controls>
+</div>

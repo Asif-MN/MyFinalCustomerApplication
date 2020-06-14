@@ -1,0 +1,55 @@
+<!-- nav -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark " *ngIf="currentUser">
+  <label class="navbar-brand" *ngIf="!isAdmin" >Customer Manager</label>
+  <label class="navbar-brand" *ngIf="isAdmin" >Administrator</label>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" *ngIf="isAdmin">
+        <a class="nav-link" routerLink="/">Admin</a>
+      </li>
+      <li class="nav-item" *ngIf="!isAdmin">
+        <a class="nav-link" routerLink="/customer">Customer</a>
+      </li>
+      <li class="nav-item" *ngIf="!isAdmin">
+        <a class="nav-link" routerLink="orders">Orders</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+  <div style="color:white;">&nbsp;&nbsp;{{currentUser.firstName}} {{currentUser.lastName}} <small>(<i>{{currentUser.role}}</i></small>)</div>
+</nav>
+
+
+<!-- main app container -->
+<!--<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-10 offset-sm-1">
+              <alert></alert>
+              test
+          </div>
+      </div>
+  </div>
+</div>-->
+<div class="body-container">
+  <div class="container">
+      <div class="row">
+        <div>
+          <alert></alert>
+          <router-outlet></router-outlet>
+        </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <p class="text-xs-center">&copy; Copyright 2019. All rights reserved.</p>
+</footer>

@@ -1,0 +1,43 @@
+<header>
+<div class="btn-group" >
+    <button class="btn btn-white" type="button"(click)="onDisplayModeChange(1)"
+        [ngClass]="{'btn-primary active': displayMode === 1}" >
+        <i class="fa fa-th"></i>&nbsp;Card View
+    </button>
+    <button class="btn btn-white" type="button"  (click)="onDisplayModeChange(2)"
+        [ngClass]="{'btn-primary active': displayMode === 2}" >
+        <i class="fa fa-list"></i>&nbsp;List View
+    </button>
+    <button class="btn btn-white" type="button"  (click)="onDisplayModeChange(3)"
+        [ngClass]="{'btn-primary active': displayMode === 3}" >
+        <i class="fa fa-map-marker"></i>&nbsp;Map View
+    </button>
+    <button class="btn btn-white" type="button"  (click)="addCustomer()"
+        [ngClass]="{'btn-primary active': displayMode === 4}" >
+        <i class="fa fa-plus"></i>&nbsp;Add Customer
+    </button>
+</div>
+</header>
+<div style="margin-top:3%;">
+    <!-- Card View -->
+    <div *ngIf="displayMode === 1" class="view_content1">
+        <app-customercardview [urole]="userrole" [uid]="userid"></app-customercardview>
+    </div>
+
+    <!-- List View -->
+    <div *ngIf="displayMode === 2" class="view_content">
+        <app-customerlistview></app-customerlistview>
+    </div>
+
+    <!-- Map View -->
+    <div *ngIf="displayMode === 3" class="view_content">
+        <!--<app-list-container *ngFor='let product of productsList' [product]="product></app-list-container>-->
+        <img alt="image" src="https://www.jqueryscript.net/images/jQuery-Plugin-To-Parse-Address-Text-Coordinates-Into-Google-Maps-findus.jpg">
+    </div>
+
+    <!-- Add Customer -->
+    <div *ngIf="displayMode === 4" class="view_content">
+        <!--<app-list-container *ngFor='let product of productsList' [product]="product></app-list-container>-->
+        list view
+    </div>
+</div>
